@@ -1,0 +1,241 @@
+:root {
+    --color-primario: #9FDB61;
+    --color-secundario: #ACB1A5;
+    --color-fondo: #F5F6FA;
+    --color-texto: #1C1B1B;
+    --radio-borde: 8px;
+    --sombra-caja: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cuadricula-ejercicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 3rem; 
+    padding-bottom: 2rem;
+}
+
+.tarjeta-ejercicio {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-ejercicio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-ejercicio h3 {
+    color: var(--color-primario);
+    line-height: 1.5;
+    margin-top: 1rem; 
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-ejercicio p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-ejercicio > h3:nth-of-type(2) {
+    margin-top: 1.5rem; 
+}
+
+.tarjeta-ejercicio p:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-ejercicio ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.tarjeta-ejercicio li {
+    margin-bottom: 0.5rem;
+}
+
+.console-log {
+    padding: 1rem;
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    border-radius: var(--radio-borde);
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-secundario);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.boton:hover {
+    background-color: var(--color-primario);
+}
+
+.boton-volver {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+.resultado {
+    background-color: #f5f5f5;
+    border-left: 5px solid var(--color-primario);
+    padding: 15px;
+    margin: 20px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border-radius: 0 var(--radio-borde) var(--radio-borde) 0;
+}
+
+.tarjeta-ejercicio a:not(.boton) {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tarjeta-ejercicio a:not(.boton):hover {
+    text-decoration: underline;
+}
+
+.formulario-viaje {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario-viaje h2 {
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+}
+
+.formulario-viaje label {
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.formulario-viaje input,
+.formulario-viaje select {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.formulario-viaje button {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    align-self: flex-start;
+    padding: 0.5rem;
+}
+
+.lista-viajes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.viaje {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.viaje-info {
+    flex: 1;
+}
+
+.viaje-info p {
+    margin-bottom: 0.3rem;
+    color: #444;
+}
+
+@media (max-width: 700px) {
+    .cuadricula-ejercicios {
+        grid-template-columns: 1fr;
+    }
+    
+    .tarjeta-ejercicio {
+        max-width: 100%;
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+
+    .viaje {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .viaje button {
+        margin-top: 0.8rem;
+    }
+}

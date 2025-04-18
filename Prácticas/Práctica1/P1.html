@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Viajes - ECMAScript 6</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Planificador de Viajes con ECMAScript 6</h1>
+    </header>
+
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Descripción</h3>
+                <p>
+                    Este proyecto es un planificador simple de viajes que permite a los usuarios registrar destinos y fechas,
+                    así como calcular el costo total de un viaje. En este, se practican los conceptos relacionados con el tema de ECMAScript
+                </p>
+
+                <h3>Formulario</h3>
+                <section class="formulario-viaje">
+                    <form id="form-viaje">
+                        <label>Destino:
+                            <select id="destino"></select>
+                        </label><br>
+                        <label>Fecha:
+                            <input type="date" id="fecha">
+                        </label><br>
+                        <label>Transporte:
+                            <select id="transporte"></select>
+                        </label><br>
+                        <label>Personas:
+                            <input type="number" id="personas" min="1" value="1">
+                        </label><br>
+                        <button type="submit">Registrar viaje</button>
+                    </form>
+                </section>
+
+                <h3>Itinerario</h3>
+                <section class="itinerario">
+                    <div id="lista-itinerario"></div>
+                </section>
+
+                <h3>Consola</h3>
+                <div class="console-log" id="console-output"></div>
+
+                <div class="boton-volver">
+                    <a href="../../index.html" class="boton">Volver</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+
+            const text = args.map(arg =>
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+
+            consoleOutput.innerHTML += text + '<br>';
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        };
+
+        import './app.js';
+    </script>
+
+</body>
+</html>
