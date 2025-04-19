@@ -217,6 +217,98 @@ header h1 {
     color: #444;
 }
 
+.formulario-compras {
+    margin-bottom: 1.5rem;
+}
+
+.formulario-compras label {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--color-texto);
+}
+
+.formulario-compras input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radio-borde);
+    font-family: inherit;
+}
+
+.formulario-compras button[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.formulario-compras button[type="submit"]:hover {
+    background-color: #8ec556;
+    transform: translateY(-2px);
+}
+
+.formulario-compras button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.lista-compras {
+    margin-bottom: 1.5rem;
+}
+
+#lista-productos ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+}
+
+#lista-productos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    transition: transform 0.2s;
+}
+
+#lista-productos li:hover {
+    transform: translateX(5px);
+}
+
+#lista-productos button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#lista-productos button:hover {
+    background-color: #ff5252;
+}
+
+.console-log {
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    font-family: monospace;
+    padding: 1rem;
+    border-radius: var(--radio-borde);
+    min-height: 150px;
+    max-height: 250px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -237,5 +329,47 @@ header h1 {
 
     .viaje button {
         margin-top: 0.8rem;
+    }
+
+    .contenedor {
+        padding: 0 1rem;
+    }
+
+    .formulario-compras {
+        gap: 0.8rem;
+    }
+
+    .formulario-compras input {
+        font-size: 0.95rem;
+    }
+
+    .formulario-compras button,
+    .boton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .producto-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .producto-info {
+        width: 100%;
+    }
+
+    .boton-eliminar {
+        align-self: flex-end;
+        width: 100%;
+        text-align: center;
+    }
+
+    .console-log {
+        font-size: 0.85rem;
+        padding: 0.8rem;
+    }
+
+    .boton-volver {
+        justify-content: center;
     }
 }

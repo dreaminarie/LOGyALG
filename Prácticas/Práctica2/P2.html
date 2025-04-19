@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Compras con Estructura de Datos</h1>
+    </header>
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Descripción</h3>
+                <p>
+                    Este proyecto permite practicar conceptos básicos de cómo usar estructuras de datos sencillas como arreglos y 
+                    objetos para la solición de problemas del mundo real, como una lista de compras, con JavaScript
+                </p>
+
+                <h3>Agregar Producto</h3>
+                <section class="formulario-compras">
+                    <form id="form-compras">
+                        <label>Producto:
+                            <input type="text" id="producto" placeholder="Ingrese un producto" required>
+                        </label><br>
+                        <label>Cantidad:
+                            <input type="number" id="cantidad" min="1" value="1">
+                        </label><br>
+                        <button type="submit">Agregar a la lista</button>
+                    </form>
+                </section>
+
+                <h3>Lista de Compras</h3>
+                <section class="lista-compras">
+                    <div id="lista-productos"></div>
+                </section>
+
+                <h3>Consola</h3>
+                <div class="console-log" id="console-output"></div>
+
+                <div class="boton-volver">
+                    <a href="../../index.html" class="boton">Volver</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+
+            const text = args.map(arg =>
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+
+            consoleOutput.innerHTML += text + '<br>';
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        };
+    </script>
+    <script src="lista-compras.js"></script>
+</body>
+</html>
