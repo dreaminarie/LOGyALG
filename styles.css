@@ -471,6 +471,155 @@ header h1 {
     flex: 1;
 }
 
+.tarjeta-ejercicio {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.tarjeta-ejercicio h2 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.panel-control {
+    margin-bottom: 2rem;
+}
+
+.invitados-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.invitado {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    padding: 1rem;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.invitado.destacado {
+    background-color: rgba(159, 219, 97, 0.2);
+    transform: scale(1.05);
+    border: 2px solid var(--color-primario);
+}
+
+.entrada-invitados {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.entrada-invitados textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radio-borde);
+    resize: vertical;
+    min-height: 100px;
+}
+
+.boton {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+.boton:hover {
+    background-color: #8bc34a;
+}
+
+.resultado {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: var(--radio-borde);
+    border-left: 4px solid var(--color-primario);
+}
+
+.pareja-encontrada {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pareja-miembro {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-caja);
+    font-weight: bold;
+    color: var(--color-primario);
+    position: relative;
+}
+
+.pareja-miembro::after {
+    content: attr(data-inicial);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--color-secundario);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.console-log {
+    padding: 1rem;
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    border-radius: var(--radio-borde);
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-top: 2rem;
+}
+
+.instrucciones {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    margin-bottom: 1.5rem;
+}
+
+.instrucciones h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.instrucciones ol {
+    margin-left: 1.5rem;
+}
+
+.instrucciones li {
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -557,5 +706,10 @@ header h1 {
 
     .productos-container {
         grid-template-columns: 1fr;
+    }
+
+    .pareja-encontrada {
+        flex-direction: column;
+        align-items: center;
     }
 }

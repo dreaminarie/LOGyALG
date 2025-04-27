@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Mesa</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Organizador de Mesa para Cena</h1>
+        <p>Uso del algoritmo de los dos punteros para identificar rápidamente el primer 
+            par de invitados cuyos nombres comienzan con la misma letra</p>
+    </header>
+
+    <div class="contenedor">
+        <div class="tarjeta-ejercicio">
+            <h2>Problema: Encuentra los Invitados que Pueden Sentarse Juntos</h2>
+            
+            <div class="instrucciones">
+                <h3>Instrucciones:</h3>
+                <ol>
+                    <li>Tienes una lista de invitados ordenada alfabéticamente.</li>
+                    <li>Tu tarea es encontrar el primer par de invitados consecutivos que pueden sentarse juntos.</li>
+                    <li>Un par de invitados pueden sentarse juntos si sus nombres comienzan con la misma letra.</li>
+                    <li>El algoritmo usa dos punteros: uno al inicio del arreglo y otro al siguiente elemento.</li>
+                    <li>Si las iniciales coinciden, se devuelve el par de nombres.</li>
+                    <li>Si no coinciden, ambos punteros avanzan y se repite la comparación.</li>
+                </ol>
+            </div>
+            
+            <div class="panel-control">
+                <div class="entrada-invitados">
+                    <h3>Ingresa la lista de invitados:</h3>
+                    <p>Escribe un nombre por línea. Los nombres deben estar ordenados alfabéticamente.</p>
+                    <textarea id="lista-invitados" placeholder="Ana&#10;Carlos&#10;Cecilia&#10;Daniel&#10;Diana&#10;Eduardo">
+Ana
+Carlos
+Cecilia
+Daniel
+Diana
+Eduardo</textarea>
+                    <button id="buscar-pareja" class="boton">Buscar Pareja Compatible</button>
+                </div>
+            </div>
+            
+            <div id="invitados-container" class="invitados-container">
+            </div>
+            
+            <div id="resultado" class="resultado" style="display: none;">
+                <h3>Resultado:</h3>
+                <p id="mensaje-resultado"></p>
+                <div id="pareja-encontrada" class="pareja-encontrada">
+                </div>
+            </div>
+            
+            <div class="console-log" id="consola">
+                // Consola de ejecución del algoritmo
+            </div>
+        </div>
+    </div>
+
+    <script src="organizador-mesa.js"></script>
+</body>
+</html>
