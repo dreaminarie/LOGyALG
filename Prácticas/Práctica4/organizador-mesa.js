@@ -92,19 +92,29 @@ function encontrarPareja(arr) {
 
 buscarParejaBtn.addEventListener('click', function() {
     const invitadosTexto = listaInvitadosTextarea.value.trim();
-    const invitados = invitadosTexto.split('\n').map(nombre => nombre.trim()).filter(nombre => nombre !== '');
+    const invitados = invitadosTexto.split('\n')
+        .map(nombre => nombre.trim())
+        .filter(nombre => nombre !== '');
     
     if (invitados.length < 2) {
         alert("Necesitas al menos dos invitados para buscar parejas compatibles.");
         return;
     }
     
-    mostrarInvitados(invitados);
+    const invitadosOrdenados = [...invitados].sort((a, b) => 
+        a.toLowerCase().localeCompare(b.toLowerCase())
+    );
     
-    const pareja = encontrarPareja(invitados);
+    listaInvitadosTextarea.value = invitadosOrdenados.join('\n');
+    
+    mostrarInvitados(invitadosOrdenados);
+    
+    const pareja = encontrarPareja(invitadosOrdenados);
     
     mostrarResultado(pareja);
 });
+
+listaInvitadosTextarea.value = invitadosOrdenados.join('\n');
 
 document.addEventListener('DOMContentLoaded', function() {
     const invitadosDefault = listaInvitadosTextarea.value.trim().split('\n').map(nombre => nombre.trim());
