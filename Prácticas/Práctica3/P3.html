@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda: Filtrado y Ordenamiento</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+        <p>Filtrado y ordenamiento de productos por precio, orden alfabético y generación de lista con los nombres</p>
+    </header>
+
+    <div class="contenedor">
+        <div class="panel-control">
+            <h2>Panel de Control</h2>
+            <div class="filtros">
+                <div>
+                    <label for="filtro-precio">Filtrar por precio máximo:</label>
+                    <input type="number" id="filtro-precio" value="100" min="0">
+                </div>
+                
+                <div>
+                    <label for="filtro-categoria">Filtrar por categoría:</label>
+                    <select id="filtro-categoria">
+                        <option value="todas">Todas las categorías</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="orden">Ordenar por:</label>
+                    <select id="orden">
+                        <option value="nombre-asc">Nombre (A-Z)</option>
+                        <option value="nombre-desc">Nombre (Z-A)</option>
+                        <option value="precio-asc">Precio (menor a mayor)</option>
+                        <option value="precio-desc">Precio (mayor a menor)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="aplicar-filtros" class="boton">Aplicar Filtros</button>
+        </div>
+        
+        <div class="productos-container" id="productos-container">
+
+        </div>
+        
+        <div class="resultados">
+            <h3>Productos filtrados por precio menor a $100:</h3>
+            <ul id="productos-filtrados"></ul>
+            
+            <h3>Productos ordenados alfabéticamente:</h3>
+            <ul id="productos-ordenados"></ul>
+            
+            <h3>Lista de nombres de productos:</h3>
+            <ul id="nombres-productos"></ul>
+            
+            <div class="totales">
+                <p id="total-productos">Total de productos: 0</p>
+                <p id="precio-promedio">Precio promedio: $0.00</p>
+                <p id="hay-productos-premium" style="color: #e63946;"></p>
+            </div>
+        </div>
+        
+        <div class="tarjeta-ejercicio">
+            <h2>Lista de Compras</h2>
+            <div class="formulario-compras">
+                <form id="form-compras">
+                    <div class="form-row">
+                        <div>
+                            <label for="producto">Producto:</label>
+                            <input type="text" id="producto" placeholder="Nombre del producto" required>
+                        </div>
+                        <div>
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" id="cantidad" value="1" min="1" required>
+                        </div>
+                    </div>
+                    <button type="submit">Agregar a la lista</button>
+                </form>
+            </div>
+            
+            <div id="lista-productos" class="lista-compras">
+                <p>La lista de compras está vacía.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="tienda-online.js"></script>
+
+</body>
+</html>
