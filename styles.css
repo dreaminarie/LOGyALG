@@ -620,6 +620,79 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+.formulario-analisis {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--radio-borde);
+    font-family: inherit;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8cc455;
+}
+
+.resultado {
+    background-color: var(--color-fondo);
+    padding: 15px;
+    border-radius: var(--radio-borde);
+    margin: 20px 0;
+    border-left: 4px solid var(--color-primario);
+}
+
+.palabra-destacada {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--color-primario);
+}
+
+.highlight {
+    background-color: rgba(159, 219, 97, 0.3);
+    border-bottom: 2px solid var(--color-primario);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.console-log {
+    padding: 1rem;
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    border-radius: var(--radio-borde);
+    font-family: 'Courier New', monospace;
+    line-height: 1.4;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin-top: 10px;
+}
+
+#texto-con-highlight {
+    background-color: white;
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -711,5 +784,13 @@ header h1 {
     .pareja-encontrada {
         flex-direction: column;
         align-items: center;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .palabra-destacada {
+        font-size: 1.1em;
     }
 }

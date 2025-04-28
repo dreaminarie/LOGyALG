@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra Más Larga</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Encontrar la Palabra Más Larga</h1>
+        <p>Uso de la técnica Sliding Window para identificar la palabra más larga en una cadena de texto</p>
+    </header>
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Instrucciones</h3>
+                <p>
+                    Esta herramienta ayuda a identificar la palabra más larga en un texto utilizando
+                    la técnica Sliding Window. Para que funcione se debe ingresar un párrafo en el área de texto 
+                    y presionar "Analizar" para encontrar la palabra de mayor longitud.
+                </p>
+
+                <h3>Ingresa tu texto</h3>
+                <section class="formulario-analisis">
+                    <textarea id="texto-input" placeholder="Escribe o pega aquí tu texto para analizar...">JavaScript es un lenguaje de programación sumamente interesante para aprender.</textarea>
+                    <button id="analizar-btn">Analizar texto</button>
+                </section>
+
+                <div class="resultado" id="resultado-container" style="display: none;">
+                    <h3>Resultado del análisis</h3>
+                    <p>La palabra más larga es: <span class="palabra-destacada" id="palabra-resultado"></span></p>
+                    <p>Longitud: <span id="longitud-resultado"></span> caracteres</p>
+                    <div id="texto-con-highlight"></div>
+                </div>
+
+                <h3>Consola</h3>
+                <div class="console-log" id="console-output"></div>
+            </div>
+        </div>
+    </main>
+    <script src="buscador-palabra.js"></script>
+</body>
+</html>
