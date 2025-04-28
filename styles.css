@@ -693,6 +693,72 @@ button:hover {
     border: 1px solid #e5e5e5;
 }
 
+.lista-regalos {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--color-secundario);
+}
+
+.lista-regalos ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.lista-regalos li {
+    margin-bottom: 8px;
+    color: var(--color-texto);
+    font-weight: 500;
+}
+
+.formulario-busqueda {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.formulario-busqueda input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--radio-borde);
+    font-size: 16px;
+}
+
+.formulario-busqueda button {
+    padding: 10px 20px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.formulario-busqueda button:hover {
+    background-color: #8ac44f;
+}
+
+.resultado {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--radio-borde);
+    background-color: #f9f9f9;
+}
+
+.regalo-encontrado {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.regalo-no-encontrado {
+    color: #f44336;
+    font-weight: bold;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -793,4 +859,27 @@ button:hover {
     .palabra-destacada {
         font-size: 1.1em;
     }
+
+    .formulario-busqueda {
+        flex-direction: column;
+    }
+    
+    .formulario-busqueda input,
+    .formulario-busqueda button {
+        width: 100%;
+    }
+    
+    .lista-regalos {
+        padding: 10px;
+    }
+}
+
+@keyframes highlightResult {
+    0% { background-color: rgba(159, 219, 97, 0.3); }
+    50% { background-color: rgba(159, 219, 97, 0.5); }
+    100% { background-color: rgba(159, 219, 97, 0.3); }
+}
+
+.highlight-animation {
+    animation: highlightResult 1s ease-in-out;
 }
