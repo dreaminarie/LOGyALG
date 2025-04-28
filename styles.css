@@ -759,6 +759,84 @@ button:hover {
     font-weight: bold;
 }
 
+.formulario-numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.botones-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.boton-principal {
+    background-color: var(--color-primario);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.numeros-lista {
+    min-height: 100px;
+    margin: 1rem 0;
+    background-color: var(--color-fondo);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.numeros-lista ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: 0;
+}
+
+.numeros-lista li {
+    background-color: #e9f5da;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio-borde);
+    border: 1px solid var(--color-primario);
+    margin-bottom: 0;
+}
+
+.resultado {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f0f7e6;
+    border-radius: var(--radio-borde);
+    border-left: 4px solid var(--color-primario);
+}
+
+#mensaje-resultado {
+    font-weight: bold;
+}
+
+.log-entry {
+    margin-bottom: 5px;
+    padding: 2px 0;
+}
+
+.log-divide {
+    color: #9FDB61; 
+}
+
+.log-conquer {
+    color: #50C878;  
+}
+
+.log-base {
+    color: #FFA500;  
+}
+
+.log-result {
+    color: #FF6B6B;  
+    font-weight: bold;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -871,6 +949,15 @@ button:hover {
     
     .lista-regalos {
         padding: 10px;
+    }
+
+    .botones-container {
+        flex-direction: column;
+    }
+    
+    .numeros-lista li {
+        flex-grow: 1;
+        text-align: center;
     }
 }
 

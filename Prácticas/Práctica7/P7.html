@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Máximo</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Buscar el Número Máximo</h1>
+        <p> Uso del enfoque de "divide and conquer" para encontrar el número máximo un arreglo</p>
+    </header>
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Ingresar Números</h3>
+                <section class="formulario-numeros">
+                    <input type="number" id="numero-input" placeholder="Ingresa un número...">
+                    <div class="botones-container">
+                        <button id="agregar-btn">Agregar Número</button>
+                        <button id="ejemplo-btn">Cargar Ejemplo</button>
+                        <button id="limpiar-btn">Limpiar Lista</button>
+                    </div>
+                </section>
+
+                <h3>Lista de Números</h3>
+                <div class="numeros-lista">
+                    <ul id="lista-numeros">
+                    </ul>
+                </div>
+
+                <button id="buscar-max-btn" class="boton-principal">Encontrar el Máximo</button>
+
+                <div class="resultado" id="resultado-container">
+                    <h3>Resultado</h3>
+                    <p id="mensaje-resultado">Agrega números a la lista para encontrar el máximo</p>
+                </div>
+
+                <h3>Pasos del Algoritmo</h3>
+                <div class="console-log" id="console-output"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="número-máximo.js"></script>
+</body>
+</html>
