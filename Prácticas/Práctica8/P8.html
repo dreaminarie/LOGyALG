@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas Personales</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de Notas Personales</h1>
+        <p>Aplicación para crear, leer, listar y eliminar notas personales</p>
+    </header>
+    <main class="contenedor">
+        <div class="cuadricula-ejercicios">
+            <div class="tarjeta-ejercicio">
+                <h3>Crear Nueva Nota</h3>
+                <section class="formulario-notas">
+                    <input type="text" id="titulo-input" placeholder="Título de la nota..." required>
+                    <textarea id="contenido-input" placeholder="Contenido de la nota..." rows="4" required></textarea>
+                    <div class="botones-container">
+                        <button id="agregar-btn" class="boton-principal">Guardar Nota</button>
+                        <button id="cargar-ejemplos-btn">Cargar Ejemplos</button>
+                        <button id="limpiar-form-btn">Limpiar Formulario</button>
+                    </div>
+                </section>
+
+                <h3>Buscar Nota</h3>
+                <section class="buscar-nota">
+                    <div class="botones-container">
+                        <input type="text" id="buscar-input" placeholder="Texto a buscar...">
+                        <button id="buscar-btn">Buscar Nota</button>
+                    </div>
+                </section>
+
+                <h3>Mis Notas</h3>
+                <div class="notas-lista" id="notas-container">
+                    <p id="notas-empty-message">No hay notas guardadas</p>
+                </div>
+
+                <div class="resultado" id="resultado-container">
+                    <h3>Resultado de la Operación</h3>
+                    <p id="mensaje-resultado">Usa el formulario para gestionar tus notas</p>
+                </div>
+
+                <h3>Registro de Operaciones</h3>
+                <div id="console-output"></div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="gestor-notas.js"></script>
+</body>
+</html>

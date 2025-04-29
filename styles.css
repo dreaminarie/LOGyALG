@@ -837,6 +837,216 @@ button:hover {
     font-weight: bold;
 }
 
+.formulario-notas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.botones-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #959a8e;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.boton-principal {
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.boton-principal:hover {
+    background-color: #8ac34f;
+}
+
+#buscar-btn {
+    background-color: #64b5f6;
+}
+
+#buscar-btn:hover {
+    background-color: #1976d2;
+}
+
+#limpiar-form-btn {
+    background-color: #ACB1A5;
+}
+
+#cargar-ejemplos-btn {
+    background-color: #ff9800;
+}
+
+#cargar-ejemplos-btn:hover {
+    background-color: #f57c00;
+}
+
+.notas-lista {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    background-color: #fcfcfc;
+}
+
+.nota {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 8px;
+    border-radius: var(--radio-borde);
+    transition: background-color 0.2s;
+    position: relative;
+    border-left: 4px solid var(--color-primario);
+}
+
+.nota:hover {
+    background-color: #f5f5f5;
+}
+
+.nota h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--color-primario);
+    padding-right: 60px;
+}
+
+.nota p {
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.nota-botones {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.eliminar-btn {
+    background-color: #ff6b6b;
+    font-size: 0.85rem;
+    padding: 5px 10px;
+}
+
+.eliminar-btn:hover {
+    background-color: #ff4f4f;
+}
+
+.nota-resaltada {
+    box-shadow: 0 0 5px rgba(159, 219, 97, 0.3);
+}
+
+.buscar-nota {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.resultado {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    background-color: #f8f8f8;
+}
+
+#mensaje-resultado {
+    padding: 8px;
+    border-left: 4px solid #ddd;
+}
+
+#resultado-container {
+    border-left: 4px solid #ddd;
+}
+
+#console-output {
+    font-family: 'Courier New', monospace;
+    background-color: #2d2d2d;
+    color: #f8f8f8;
+    border: 1px solid #222;
+    padding: 10px;
+    border-radius: var(--radio-borde);
+    height: 150px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.coincidencia-indicadores {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: white;
+}
+
+.coincide-titulo {
+    background-color: #4caf50;
+}
+
+.coincide-contenido {
+    background-color: #2196f3;
+}
+
+.resaltado {
+    background-color: #ffeb3b;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+.nota {
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+}
+
+.nota:has(.coincidencia-indicadores) {
+    border-left-color: #ff9800;
+}
+
 @media (max-width: 700px) {
     .cuadricula-ejercicios {
         grid-template-columns: 1fr;
@@ -958,6 +1168,15 @@ button:hover {
     .numeros-lista li {
         flex-grow: 1;
         text-align: center;
+    }
+
+    .formulario-notas {
+        gap: 15px;
+    }
+    
+    input[type="text"],
+    textarea {
+        font-size: 16px; 
     }
 }
 
